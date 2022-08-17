@@ -23,4 +23,7 @@ Trying to use BigInt in the query gives typescript`s error: "Argument of type 'B
 await UserService.findProfile(BigInt(1))
 ```
 
+## Problem Three
 
+Sqlite dont work well with BigInt. Issue: 
+https://github.com/knex/knex/issues/5050
