@@ -43,7 +43,7 @@ export default class UserService {
 
     // Problem Two
     public static async findProfile(idUser: BigInt) {
-        const profiles = await Profile.query().where('idUser', idUser)
+        const profiles = await Profile.query().where('userId', idUser)
 
         return profiles
     }
