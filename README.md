@@ -27,3 +27,21 @@ await UserService.findProfile(BigInt(1))
 
 Sqlite dont work well with BigInt. Issue: 
 https://github.com/knex/knex/issues/5050
+
+## Problem Four
+
+Lucid does not expect a relationship to be null in a preload.
+
+```ts
+import UserService from 'App/Services/UserService'
+
+await UserService.createUser(BigInt(2))
+
+await UserService.allUsers()
+```
+
+Error:
+```
+Uncaught:
+Exception: Cannot preload "profile", value of "User.profileId" is undefined
+```
